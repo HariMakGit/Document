@@ -1,0 +1,66 @@
+Part 05 : Main method in asp net core
+	-- asp.net core initially start as console application
+	-- loading configure & setup webhost, setup web server and run
+
+Part 06 : ASP NET Core in process hosting
+	-- InProcess/Outprocess
+	-- InProcess  (IISExpress - lightweight - developement purpose only) w3wp.exe /iisexpress.exe
+	-- OutProcess - (internal -> kestral web server (dotnet run) and exeternal - >> IIS, nginx, Apache)
+
+ASP NET Core launchsettings json file
+	-- local dev machine
+	-- not need for deployement
+	-- app setting in json file.
+
+Part 09 : ASP NET Core appsettings json file ->
+	-- file, user configuraiton, environment variable
+	-- command line arguments
+	-- (Dependency Injection)
+
+Part 10 : Middleware in ASP NET Core
+	-- request -> process -> response
+	-- pass request to desired middleware (based on request) [logging | static files | MVC ]
+	-- need to take care of middleware of order
+	-- handle the request and shor-circuit middleware pipeline
+
+Part 11 : Configure ASP NET Core request processing pipeline
+	-- terminal middleware aap.run	
+	-- app.Use (run next middleware)
+	-- reverse request processing from middleware to middleware
+
+Part 12 : Static files in asp net core
+	-- must be wwwroot at under project root folder	
+	-- file must be insider wwwroot folder
+	-- app.UseStaticfiles()
+	
+Part 13 : ASP NET Core developer exception page
+	-- app.userfileserver() // middleware to serve root resource 
+	-- add dev. exception middle ware asap to catch exception 
+	-- to customize execption - use devexectpion object
+
+Part 14 : ASP NET Core environment variables
+	-- default env variable = "production"/for security
+	-- need to restart vs to get updated value of env.var from operating system.
+	-- launch setting will be override OS value
+	-- dev (launchsetting.json) and on prodcuttion set on OS level
+
+Part 15 : ASP NET Core MVC tutorial
+
+Part 16 : Setup mvc in asp net core
+	-- add required mvc services by DI
+	-- add useMVcwithdefaultroute middle ware after static files.
+
+Part 17 : ASP NET Core AddMvc vs AddMvcCore
+	-- addmvc will call internaly mvc core services.
+	-- addmvccore doesnt add mvc functionality
+
+Part 18 : Model in ASP NET Core MVC
+	-- data + manage data
+
+Part 19 : ASP NET Core dependency injection tutorial
+	-- services.AddSingleton<I,Implementation>
+
+	
+	
+
+8200441245
